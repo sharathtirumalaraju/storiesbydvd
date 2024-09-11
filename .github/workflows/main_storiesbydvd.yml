@@ -43,5 +43,4 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'storiesbydvd'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5C5AABBA311541D984BCE68E3F2CB353 }}
