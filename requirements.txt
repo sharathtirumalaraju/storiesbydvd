@@ -1,4 +1,4 @@
-Django
+django
 django-storages
 azure-storage-blob
 pillow
