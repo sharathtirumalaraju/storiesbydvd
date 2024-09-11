@@ -11,21 +11,16 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-fadcw+mcgr!canipx8^v9q32z8xu*4vj3ofbc3ss!)*f9^-7es'
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['storiesbydvd.azurewebsites.net']
 
 
 # Application definition
@@ -125,9 +120,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
-AZURE_ACCOUNT_NAME = 'portfolioimagestorage'  # Your Azure storage account name
-AZURE_CONNECTION_STRING = 'DefaultEndpointsProtocol=https;AccountName=portfolioimagestorage;AccountKey=/aFFCKCcL3afynpMNym7MWMssX3ppd2yKLM+Ag5xjnVSZqTOFvBNXj5XD9CSV5QRUjwkcx9nflTp+AStpfrwWg==;EndpointSuffix=core.windows.net'
-
+AZURE_ACCOUNT_NAME = 'portfolioimagestorage' 
+AZURE_CONNECTION_STRING = os.getenv('AZURE_CONNECTION_STRING')
 AZURE_CONTAINER_CONTENT = 'aboutme'
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
 MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/'
