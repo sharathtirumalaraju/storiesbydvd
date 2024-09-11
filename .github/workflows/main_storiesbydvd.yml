@@ -32,11 +32,7 @@ jobs:
 
       - name: Run migrations
         run: |
-          python manage.py migrate
-
-      - name: Collect static files
-        run: |
-          python manage.py collectstatic --noinput
+          python manage.py runserver
 
   deploy:
     runs-on: ubuntu-latest
