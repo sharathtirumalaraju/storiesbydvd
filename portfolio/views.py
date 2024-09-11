@@ -12,7 +12,7 @@ def portfolio_view(request):
     return render(request, 'portfolio.html')
 
 def about_me_view(request):
-    about_me_content = get_blob_content(settings.AZURE_CONTAINER_CONTENT, 'about_me.txt')
+    about_me_content = get_blob_content('aboutme', 'about_me.txt')
     return render(request, 'about_me.html', {'about_me_content': about_me_content})
 
 def travel_view(request):
