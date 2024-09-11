@@ -41,6 +41,5 @@ jobs:
       - name: Deploy to Azure
         uses: azure/webapps-deploy@v2
         with:
-          app-name: '<YOUR_WEB_APP_NAME>' # replace with your Azure web app name
-          slot-name: 'production'
+          app-name: 'storiesbydvd'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_90AE5BF1CD6A485E85F123B09163E13C }}
