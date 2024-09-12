@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['storiesbydvd-hwc7ewhea2czf0fy.mexicocentral-01.azurewebsites.net']
+ALLOWED_HOSTS = ['storiesbydvd.azurewebsites.net']
 
 
 # Application definition
